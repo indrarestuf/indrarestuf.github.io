@@ -1,36 +1,23 @@
 <h1>Hello World</h1>
-<div id="insta-feed"> </div> 
-
+<ul id="rudr_instafeed"></ul>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-
-
-	var request = new XMLHttpRequest();
-			request.open('GET', 'https://api.instagram.com/v1/users/self/media/recent/?access_token=853579855.7d8b734.6643b5915242473da3e1a4c3e6514d33&count=9', true);
-
-			request.onload = function(container) {
-			  if (request.status >= 200 && request.status < 400) {
-			    // Success!
-			    var data = JSON.parse(request.responseText);
-			    for (var i=0;i < data.data.length;i++) {
-			    	var container = document.getElementById('insta-feed');
-			    	var imgURL = data.data[i].images.standard_resolution.url;
-			    	console.log(imgURL);
-					var div = document.createElement('div');
-			        div.setAttribute('class','instapic');
-			        container.appendChild(div);
-			        var img = document.createElement('img');
-			        img.setAttribute('src',imgURL)
-			        div.appendChild(img);
-			    }
-
-			    console.log(data);
-			  } else {
-			  }
-			};
-			request.onerror = function() {
-			  // There was a connection error of some sort
-			};
-			request.send();
-
-
+var token = '853579855.7d8b734.6643b5915242473da3e1a4c3e6514d33',
+    num_photos = 9;
+ 
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/self/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+	success: function(data){
+ 		console.log(data);
+		for( x in data.data ){
+			$('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"></li>');
+		}
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
 </script>

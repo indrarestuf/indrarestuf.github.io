@@ -31,12 +31,15 @@
             #rudr_instafeed {
                 list-style: none
             }
+            .umpat{
+            opacity:0;
+            }
         </style>
     </head>
 
     <body>
         <!-- Just an image -->
-        <nav class="navbar fixed-top navbar-light bg-white">
+        <nav class="navbar fixed-top navbar-light bg-white umpat shadow-sm">
             <div class="container">
                 <a class="navbar-brand mx-auto" href="#">
                     <img src="https://indrarestuf.github.io/logo.jpg" width="30" height="30"
@@ -47,11 +50,11 @@
         <div class="container">
             <div class="row h-100">
                 <div class="col-md-6 align-self-center">
-                    <h1 class="title">Hai! Saya Indra Restu Fauzi</h1>
+                    <h3 class="title">Hai! Saya Indra Restu Fauzi</h3>
                     <p>Desainer Grafis yang lagi icip-icip Framework PHP Laravel</p>
                 </div>
                 <div class="col-md-6 align-self-center">
-                    <img class="img-fluid" src="https://indrarestuf.github.io/logo.jpg">
+                    <img class="img-fluid rounded" src="https://indrarestuf.github.io/logo.jpg">
                 </div>
             </div>
         </div>
@@ -59,7 +62,7 @@
 
         <div class="bg-light">
             <div class="container pt-4 pb-4 ">
-                <h1 class="title">Proyek Terbaru</h1>
+                <h3>Proyek Terbaru</h3>
                 <div class="row mt-4 mb-4 ">
                     <div class="col-md-3 align-self-center">
                         <img class="img-fluid" src="https://indrarestuf.github.io/ud.jpg">
@@ -125,10 +128,10 @@
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
                 if (scroll > 5) {
-                    $(".navbar").addClass("shadow-sm");
+                    $(".navbar").removeClass("umpat");
                 }
                 else {
-                    $(".navbar").removeClass("shadow-sm");
+                    $(".navbar").addClass("umpat");
                 }
             })
         </script>

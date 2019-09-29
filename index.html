@@ -84,7 +84,7 @@
                 <h3>Proyek Terbaru</h3>
                 <div class="row mt-4 mb-4 ">
                     <div class="col-md-3 align-self-center">
-                        <img class="img-fluid" src="https://indrarestuf.github.io/ud.jpg">
+                        <img class="img-fluid rounded" src="https://indrarestuf.github.io/ud.jpg">
                     </div>
                     <div class="col-md-6 align-self-center">
                         <h3>Undangan Pernikahan Online</h3>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="row mt-4 mb-4">
                     <div class="col-md-3 align-self-center">
-                        <img class="img-fluid" src="https://indrarestuf.github.io/lp.jpg">
+                        <img class="img-fluid rounded" src="https://indrarestuf.github.io/lp.jpg">
                     </div>
                     <div class="col-md-6 align-self-center">
                         <h3>Laporan Nilai Siswa</h3>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="row mt-4 mb-4">
                     <div class="col-md-3 align-self-center">
-                        <img class="img-fluid" src="https://indrarestuf.github.io/to.jpg">
+                        <img class="img-fluid rounded" src="https://indrarestuf.github.io/to.jpg">
                     </div>
                     <div class="col-md-6 align-self-center">
                         <h3>Tryout Online </h3>
@@ -170,7 +170,7 @@
                 success: function (data) {
                     console.log(data);
                     for (x in data.data) {
-                        $('#foto').append('<div class="col-md-4 mb-4"><div class="text-center"><img class="img-fluid border" src="' + data.data[x].images.low_resolution.url + '"></div></div>');
+                        $('#foto').append('<div class="col-md-4 mb-4"><div class="text-center"><img class="img-fluid rounded border" src="' + data.data[x].images.low_resolution.url + '"></div></div>');
                     }
                 },
                 error: function (data) {

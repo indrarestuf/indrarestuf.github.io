@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whack A Corruptor</title>
+  <link rel="stylesheet" type="text/css" href="whack-a-corruptor.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-900">
+<div class="container w-[400px] h-[600px] mx-auto">
+  <h1 class="my-5 text-white text-center text-2xl font-bold">Uang yang diselamatkan : Rp <span id="papan-skor" >0</span> T</h1>
+<div id="game-area" class="bg-sky-200 grid grid-cols-2 gap-0 justify-items-center overflow-hidden pt-5 rounded-xl">
+
+
+  <div class="relative w-[200px] h-[200px] overflow-hidden" >
+    <img src="img/tikus.png" draggable="false"
+         class="tikus absolute top-3 left-1/2 -translate-x-1/2 w-20 translate-y-full transition-transform duration-300 z-0" />
+    <img src="img/building-1.png" draggable="false" class="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none" />
+  </div>
+
+  <div class="relative w-[200px] h-[200px] overflow-hidden" >
+    <img src="img/tikus.png" draggable="false"
+         class="tikus absolute -top-1 left-1/2 -translate-x-1/2 w-20 translate-y-full transition-transform duration-300 z-0" />
+    <img src="img/building-2.png" draggable="false" class="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none" />
+  </div>
+
+  <div class="relative w-[200px] h-[200px] overflow-hidden" >
+    <img src="img/tikus.png" draggable="false"
+         class="tikus absolute top-3 left-1/2 -translate-x-1/2 w-20 translate-y-full transition-transform duration-300 z-0" />
+    <img src="img/building-3.png" draggable="false" class="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none" />
+  </div>
+
+  <div class="relative w-[200px] h-[200px] overflow-hidden" >
+    <img src="img/tikus.png" draggable="false"
+         class="tikus absolute top-6 left-1/2 -translate-x-1/2 w-20 translate-y-full transition-transform duration-300 z-0" />
+    <img src="img/building-4.png" draggable="false" class="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none" />
+  </div>
+
+  <div class="relative w-[200px] h-[200px] overflow-hidden" >
+    <img src="img/tikus.png" draggable="false"
+         class="tikus absolute top-2 left-1/2 -translate-x-1/2 w-20 translate-y-full transition-transform duration-300 z-0" />
+    <img src="img/building-5.png" draggable="false" class="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none" />
+  </div>
+
+  <div class="relative w-[200px] h-[200px] overflow-hidden" >
+    <img src="img/tikus.png" draggable="false"
+         class="tikus absolute top-8 left-1/2 -translate-x-1/2 w-20 translate-y-full transition-transform duration-300 z-0" />
+    <img src="img/building-6.png" draggable="false" class="absolute top-0 left-0 w-full h-full object-contain z-10 pointer-events-none" />
+  </div>
+
+
+</div>
+</div>
+
+<script src="whack-a-corruptor.js"></script>
+</body>
+</html>
